@@ -1,0 +1,11 @@
+# Bỏ qua file cấu hình chứa Token nhạy cảm
+config.json
+
+# Bỏ qua các file rác của Python
+__pycache__/
+*.pyc
+
+# Bỏ qua các file cài đặt và file .exe nặng nề
+build/
+dist/
+*.spec

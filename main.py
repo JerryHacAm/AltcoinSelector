@@ -15,6 +15,8 @@ async def process_symbol(session, sem, sym_data, timeframe, results, progress_in
         df, _ = await fetch_ohlcv(session, symbol, timeframe, limit=150)
         
         if df is not None:
+            df = df[:-1]
+
             analyzed = analyze_squeeze_and_rsi(df)
             
             if analyzed is not None and not analyzed.empty:
